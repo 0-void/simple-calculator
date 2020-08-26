@@ -13,7 +13,7 @@ const {
   powerOfaNumber,
 } = require("./arithmeticOperations");
 
-function doArithmeticOperation(number1, number2, arithmeticOperationType) {
+const doArithmeticOperation = (number1, number2, arithmeticOperationType) => {
   switch (arithmeticOperationType) {
     case ADDITION:
       return addTwoNumbers(number1, number2);
@@ -28,6 +28,8 @@ function doArithmeticOperation(number1, number2, arithmeticOperationType) {
     default:
       return;
   }
-}
+};
+
+console.log(doArithmeticOperation(10, 30, ADDITION));
 
 module.exports.doArithmeticOperation = doArithmeticOperation;
